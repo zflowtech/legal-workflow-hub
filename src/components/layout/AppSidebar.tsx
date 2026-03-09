@@ -1,6 +1,6 @@
 import { Home, FileText, LayoutTemplate, Users, Settings } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
-import { ZFlowLogo } from './ZFlowLogo';
+import { EcoUrbisLogo } from './EcoUrbisLogo';
 import {
   Sidebar,
   SidebarContent,
@@ -29,7 +29,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-r border-border bg-background">
       <SidebarHeader className="p-4 border-b border-border">
-        <ZFlowLogo collapsed={collapsed} />
+        <EcoUrbisLogo collapsed={collapsed} />
       </SidebarHeader>
 
       <SidebarContent className="pt-2">
