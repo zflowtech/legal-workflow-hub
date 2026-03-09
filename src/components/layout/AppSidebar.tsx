@@ -1,6 +1,6 @@
-import { Home, FileText, LayoutTemplate, Users, Settings } from 'lucide-react';
+import { FileText, LayoutTemplate, Users, Settings, History, MessageSquare } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
-import { EcoUrbisLogo } from './EcoUrbisLogo';
+import { EcoUrbisOfficialLogo } from './EcoUrbisOfficialLogo';
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +15,8 @@ import {
 } from '@/components/ui/sidebar';
 
 const menuItems = [
-  { title: 'Início', url: '/', icon: Home },
+  { title: 'IA Assistant', url: '/', icon: MessageSquare },
+  { title: 'Histórico - Linha do Tempo', url: '/linha-do-tempo', icon: History },
   { title: 'Documentos', url: '/documentos', icon: FileText },
   { title: 'Modelos', url: '/modelos', icon: LayoutTemplate },
   { title: 'Equipe', url: '/equipe', icon: Users },
@@ -28,8 +29,8 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border bg-background">
-      <SidebarHeader className="p-4 border-b border-border">
-        <EcoUrbisLogo collapsed={collapsed} />
+      <SidebarHeader className="p-4 border-b border-border transition-all duration-300">
+        <EcoUrbisOfficialLogo collapsed={collapsed} />
       </SidebarHeader>
 
       <SidebarContent className="pt-2">
