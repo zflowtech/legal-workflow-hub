@@ -1,8 +1,8 @@
-import { DocFlowDocument } from '@/data/mockData';
+import { ZFlowDocument } from '@/data/mockData';
 import { AlertTriangle, Clock } from 'lucide-react';
 
 interface DeadlineTimelineProps {
-  documents: DocFlowDocument[];
+  documents: ZFlowDocument[];
 }
 
 export function DeadlineTimeline({ documents }: DeadlineTimelineProps) {

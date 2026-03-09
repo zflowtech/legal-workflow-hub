@@ -1,5 +1,6 @@
 import { Home, FileText, LayoutTemplate, Users, Settings } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
+import { ZFlowLogo } from './ZFlowLogo';
 import {
   Sidebar,
   SidebarContent,
@@ -28,14 +29,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-r border-border bg-background">
       <SidebarHeader className="p-4 border-b border-border">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <FileText className="w-4 h-4 text-primary-foreground" />
-          </div>
-          {!collapsed && (
-            <span className="text-lg font-semibold text-foreground tracking-tight">DocFlow</span>
-          )}
-        </div>
+        <ZFlowLogo collapsed={collapsed} />
       </SidebarHeader>
 
       <SidebarContent className="pt-2">

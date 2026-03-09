@@ -1,11 +1,11 @@
 import { useState, useCallback } from 'react';
-import { DocFlowDocument, DocumentStatus, PIPELINE_COLUMNS } from '@/data/mockData';
+import { ZFlowDocument, DocumentStatus, PIPELINE_COLUMNS } from '@/data/mockData';
 import { DocumentCard } from './DocumentCard';
 
 interface DocumentPipelineProps {
-  documents: DocFlowDocument[];
+  documents: ZFlowDocument[];
   onMoveDocument: (docId: string, newStatus: DocumentStatus) => void;
-  onUpdateField: (docId: string, field: keyof DocFlowDocument, value: string) => void;
+  onUpdateField: (docId: string, field: keyof ZFlowDocument, value: string) => void;
   onSelectDocument: (docId: string) => void;
 }
 

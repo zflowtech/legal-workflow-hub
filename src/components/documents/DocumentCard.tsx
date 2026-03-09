@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { DocFlowDocument } from '@/data/mockData';
+import { ZFlowDocument } from '@/data/mockData';
 import { FileText, FileIcon, AlertTriangle, DollarSign } from 'lucide-react';
 
 interface DocumentCardProps {
-  document: DocFlowDocument;
-  onUpdateField: (docId: string, field: keyof DocFlowDocument, value: string) => void;
+  document: ZFlowDocument;
+  onUpdateField: (docId: string, field: keyof ZFlowDocument, value: string) => void;
   onClick: () => void;
 }
 
@@ -31,7 +31,7 @@ export function DocumentCard({ document: doc, onUpdateField, onClick }: Document
 
   const saveEdit = useCallback(() => {
     if (editingField && editValue.trim()) {
-      onUpdateField(doc.id, editingField as keyof DocFlowDocument, editValue.trim());
+      onUpdateField(doc.id, editingField as keyof ZFlowDocument, editValue.trim());
     }
     setEditingField(null);
   }, [editingField, editValue, doc.id, onUpdateField]);

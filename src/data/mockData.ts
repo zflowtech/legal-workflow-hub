@@ -1,6 +1,6 @@
 export type DocumentStatus = 'recebido' | 'em_analise' | 'aguardando_assinatura' | 'concluido' | 'recusado';
 
-export interface DocFlowDocument {
+export interface ZFlowDocument {
   id: string;
   numeroOficio: string;
   numeroSEI: string;
@@ -60,7 +60,7 @@ export const PIPELINE_COLUMNS: { id: DocumentStatus; label: string; color: strin
   { id: 'recusado', label: 'Recusado', color: 'hsl(var(--destructive))' },
 ];
 
-export const mockDocuments: DocFlowDocument[] = [
+export const mockDocuments: ZFlowDocument[] = [
   {
     id: 'doc-001',
     numeroOficio: 'Ofício nº 34/2026/SP-Regula',

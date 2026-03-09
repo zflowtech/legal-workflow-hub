@@ -1,8 +1,8 @@
-import { DocFlowDocument } from '@/data/mockData';
+import { ZFlowDocument } from '@/data/mockData';
 import { Clock } from 'lucide-react';
 
 interface RecentActivityProps {
-  documents: DocFlowDocument[];
+  documents: ZFlowDocument[];
 }
 
 export function RecentActivity({ documents }: RecentActivityProps) {

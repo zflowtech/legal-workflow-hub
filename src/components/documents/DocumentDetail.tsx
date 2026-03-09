@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react';
-import { DocFlowDocument } from '@/data/mockData';
+import { ZFlowDocument } from '@/data/mockData';
 import { ArrowLeft, FileText, Download, Clock, DollarSign, AlertTriangle, CheckCircle2, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface DocumentDetailProps {
-  document: DocFlowDocument;
+  document: ZFlowDocument;
   onBack: () => void;
   onApprove: (docId: string) => void;
   onReject: (docId: string) => void;

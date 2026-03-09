@@ -1,9 +1,9 @@
 import { useState, useCallback } from 'react';
-import { DocFlowDocument, DocumentStatus, TeamMember, mockDocuments, mockTeamMembers } from '@/data/mockData';
+import { ZFlowDocument, DocumentStatus, TeamMember, mockDocuments, mockTeamMembers } from '@/data/mockData';
 import { toast } from 'sonner';
 
 export function useDocuments() {
-  const [documents, setDocuments] = useState<DocFlowDocument[]>(mockDocuments);
+  const [documents, setDocuments] = useState<ZFlowDocument[]>(mockDocuments);
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>(mockTeamMembers);
 
   const moveDocument = useCallback((docId: string, newStatus: DocumentStatus) => {
@@ -28,7 +28,7 @@ export function useDocuments() {
     toast.success(`Documento movido para "${newStatus.replace('_', ' ')}"`);
   }, []);
 
-  const updateDocumentField = useCallback((docId: string, field: keyof DocFlowDocument, value: string) => {
+  const updateDocumentField = useCallback((docId: string, field: keyof ZFlowDocument, value: string) => {
     setDocuments(prev =>
       prev.map(doc =>
         doc.id === docId ? { ...doc, [field]: value } : doc
@@ -79,8 +79,8 @@ export function useDocuments() {
     );
   }, []);
 
-  const addDocument = useCallback((doc: Partial<DocFlowDocument>) => {
-    const newDoc: DocFlowDocument = {
+  const addDocument = useCallback((doc: Partial<ZFlowDocument>) => {
+    const newDoc: ZFlowDocument = {
       id: `doc-${Date.now()}`,
       numeroOficio: doc.numeroOficio || 'Novo Ofício',
       numeroSEI: doc.numeroSEI || '',
