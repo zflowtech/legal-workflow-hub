@@ -4,7 +4,7 @@ import { AIPortal } from '@/components/dashboard/AIPortal';
 const Index = () => {
   return (
     <AppLayout>
-      <div className="flex flex-col h-[calc(100vh-4rem)]">
+      <div className="flex flex-col h-[calc(100vh-1rem)]">
         <AIPortal />
       </div>
     </AppLayout>
